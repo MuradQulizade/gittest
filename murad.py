@@ -1,1 +1,2 @@
-print("hello world")
+def murad(a, b):
+    return a*b
