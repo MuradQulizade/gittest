@@ -1,2 +1,2 @@
-def murad(a, b):
+def muradd(a, b):
     return a*b
