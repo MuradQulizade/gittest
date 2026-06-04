@@ -1,4 +1,4 @@
 from main import murad
 
-def test():
+def test_murad():
     assert murad(3, 5) == 15
