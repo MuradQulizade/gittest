@@ -14,3 +14,5 @@ jobs:
         steps:
             - run: print("hello world")
               shell: python
+        needs:
+            - hello_world
