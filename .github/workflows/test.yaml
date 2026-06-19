@@ -35,7 +35,8 @@ jobs:
             - test2
         steps:
             - name: continuing
-              run: "murad: $murad"
+              run: |
+                echo "murad: $murad"
             - name: end
               run: print("end")
               shell: python
