@@ -8,3 +8,8 @@ jobs:
         runs-on: ubuntu-22.04
         steps:
             - run: echo "hello world"
+
+    starrtttt56t6ttt55ttrtt5:
+        runs-on: ubuntu-latest
+        steps:
+            - run: print("hello world")
