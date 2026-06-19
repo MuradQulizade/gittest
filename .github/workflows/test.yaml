@@ -24,8 +24,6 @@ jobs:
 
     test2:
         runs-on: ubuntu-latest
-        needs:
-            - hello_world
         steps:
             - run: print("hello world")
               shell: python
