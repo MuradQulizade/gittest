@@ -1,0 +1,36 @@
+name: actions
+
+on:
+    workflow_dispatch:
+
+jobs:
+    artefacts_creation:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: creating
+              run: |
+                echo "this is an artefact" > artefact.txt
+
+            - name: uploading
+              uses: actions/upload-artifact@v4
+              with:
+                name: example-artefact
+                path: artefact.txt
+
+    artefact_usage:
+        runs-on: ubuntu-22.04
+        container:
+            image: alpine:3.20
+        name: artefact-test
+        needs:
+            - artefacts_creation
+        
+        steps:
+            - name: download
+              uses: actions/download-artifact@v4
+              with:
+                name: example-artefact
+
+            - name: show
+              run: cat artifact.txt
+
