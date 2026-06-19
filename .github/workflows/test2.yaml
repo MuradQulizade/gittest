@@ -9,13 +9,13 @@ jobs:
         steps:
             - name: creating
               run: |
-                echo "this is an artefact" > artefact.txt
+                echo "this is an artefact" > artifact.txt
 
             - name: uploading
               uses: actions/upload-artifact@v4
               with:
                 name: example-artefact
-                path: artefact.txt
+                path: artifact.txt
 
     artefact_usage:
         runs-on: ubuntu-22.04
